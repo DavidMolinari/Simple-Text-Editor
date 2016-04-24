@@ -12,14 +12,59 @@ namespace SimpleTextEditor
 {
     public partial class FrmSimpleTextEditor : Form
     {
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
         public FrmSimpleTextEditor()
         {
+
             InitializeComponent();
+            // Ajout d'un item au menu composé d'un logo.
+            var exitMenuItem = menuMain.Items.Add(Image.FromFile("c:\\Exit.png"));
 
         }
 
+
+
         private void fichierToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+        /// <summary>
+        /// MouseDown sur le MenuStrip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menuMain_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+
+        }
+
+        /// <summary>
+        /// Event lors d'un Mouvement de Souris avec le bouton appuyé de déplacer la fenêtre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menuMain_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        /// <summary>
+        /// Annuler l'état Draggable après avoir relaché le click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menuMain_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
 
         }
     }
