@@ -1,1 +1,9 @@
 C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\bin\Debug\SimpleTextEditor.exe.config
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\bin\Debug\SimpleTextEditor.exe
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\bin\Debug\SimpleTextEditor.pdb
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\obj\Debug\SimpleTextEditor.csprojResolveAssemblyReference.cache
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\obj\Debug\SimpleTextEditor.FrmSimpleTextEditor.resources
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\obj\Debug\SimpleTextEditor.Properties.Resources.resources
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\obj\Debug\SimpleTextEditor.csproj.GenerateResource.Cache
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\obj\Debug\SimpleTextEditor.exe
+C:\Users\davv\Documents\GitHub\SimpleTextEditor\SimpleTextEditor\obj\Debug\SimpleTextEditor.pdb

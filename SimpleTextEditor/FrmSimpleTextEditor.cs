@@ -15,6 +15,12 @@ namespace SimpleTextEditor
         public FrmSimpleTextEditor()
         {
             InitializeComponent();
+
+        }
+
+        private void fichierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
