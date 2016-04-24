@@ -21,7 +21,8 @@ namespace SimpleTextEditor
             InitializeComponent();
             // Ajout d'un item au menu composé d'un logo.
             var exitMenuItem = menuMain.Items.Add(Image.FromFile("c:\\Exit.png"));
-
+            // Aligné à droite, j'ai mis 2h à trouver ça ! meh
+            exitMenuItem.Alignment = ToolStripItemAlignment.Right;
         }
 
 

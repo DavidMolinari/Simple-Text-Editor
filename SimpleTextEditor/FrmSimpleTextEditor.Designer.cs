@@ -48,7 +48,6 @@
             this.menuMain.Text = "menuStrip1";
             this.menuMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseDown);
             this.menuMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseMove);
-            this.menuMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseUp);
             // 
             // fichierToolStripMenuItem
             // 
