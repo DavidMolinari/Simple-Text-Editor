@@ -31,6 +31,7 @@
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rtbAffiche = new System.Windows.Forms.RichTextBox();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,18 +44,18 @@
             this.editionToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(668, 28);
+            this.menuMain.Size = new System.Drawing.Size(800, 28);
             this.menuMain.TabIndex = 0;
             this.menuMain.Text = "menuStrip1";
             this.menuMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseDown);
             this.menuMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseMove);
+            this.menuMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseUp);
             // 
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.fichierToolStripMenuItem.Text = "Fichier";
-            this.fichierToolStripMenuItem.Click += new System.EventHandler(this.fichierToolStripMenuItem_Click);
             // 
             // editionToolStripMenuItem
             // 
@@ -62,12 +63,23 @@
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.editionToolStripMenuItem.Text = "Edition";
             // 
+            // rtbAffiche
+            // 
+            this.rtbAffiche.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rtbAffiche.Location = new System.Drawing.Point(0, 31);
+            this.rtbAffiche.Name = "rtbAffiche";
+            this.rtbAffiche.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.rtbAffiche.Size = new System.Drawing.Size(800, 600);
+            this.rtbAffiche.TabIndex = 1;
+            this.rtbAffiche.Text = "";
+            // 
             // FrmSimpleTextEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(668, 531);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.rtbAffiche);
             this.Controls.Add(this.menuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuMain;
@@ -85,6 +97,7 @@
         private System.Windows.Forms.MenuStrip menuMain;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox rtbAffiche;
     }
 }
 

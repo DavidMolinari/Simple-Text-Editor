@@ -15,6 +15,8 @@ namespace SimpleTextEditor
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
+
+
         public FrmSimpleTextEditor()
         {
 
@@ -23,14 +25,17 @@ namespace SimpleTextEditor
             var exitMenuItem = menuMain.Items.Add(Image.FromFile("c:\\Exit.png"));
             // Aligné à droite, j'ai mis 2h à trouver ça ! meh
             exitMenuItem.Alignment = ToolStripItemAlignment.Right;
+            //Essai d'un event manuel !!!
+            exitMenuItem.Click += new EventHandler(clickOnExit);
+
         }
 
-
-
-        private void fichierToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clickOnExit(object sender, EventArgs e)
         {
-
+            Close();
+            // OH PUTAIN CA MARCHE !
         }
+
         /// <summary>
         /// MouseDown sur le MenuStrip
         /// </summary>
@@ -56,7 +61,7 @@ namespace SimpleTextEditor
                 Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
                 this.Location = Point.Add(dragFormPoint, new Size(dif));
             }
-        }
+            else dragging = false;        }
 
         /// <summary>
         /// Annuler l'état Draggable après avoir relaché le click.
@@ -65,8 +70,9 @@ namespace SimpleTextEditor
         /// <param name="e"></param>
         private void menuMain_MouseUp(object sender, MouseEventArgs e)
         {
-            dragging = false;
+           dragging = false;
 
         }
+
     }
 }
