@@ -52,6 +52,7 @@
     <Compile Include="FrmSimpleTextEditor.Designer.cs">
       <DependentUpon>FrmSimpleTextEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibEvents.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmSimpleTextEditor.resx">

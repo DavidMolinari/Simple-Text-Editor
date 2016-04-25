@@ -30,6 +30,9 @@
         {
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOuvrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQuitter = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rtbAffiche = new System.Windows.Forms.RichTextBox();
             this.menuMain.SuspendLayout();
@@ -53,9 +56,32 @@
             // 
             // fichierToolStripMenuItem
             // 
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuOuvrir,
+            this.menuSave,
+            this.menuQuitter});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // menuOuvrir
+            // 
+            this.menuOuvrir.Name = "menuOuvrir";
+            this.menuOuvrir.Size = new System.Drawing.Size(198, 26);
+            this.menuOuvrir.Text = "Ouvrir";
+            // 
+            // menuSave
+            // 
+            this.menuSave.Name = "menuSave";
+            this.menuSave.Size = new System.Drawing.Size(198, 26);
+            this.menuSave.Text = "Enrengistrer Sous";
+            // 
+            // menuQuitter
+            // 
+            this.menuQuitter.Name = "menuQuitter";
+            this.menuQuitter.Size = new System.Drawing.Size(198, 26);
+            this.menuQuitter.Text = "Quitter";
+            this.menuQuitter.Click += new System.EventHandler(this.clickOnExit);
             // 
             // editionToolStripMenuItem
             // 
@@ -85,6 +111,7 @@
             this.MainMenuStrip = this.menuMain;
             this.Name = "FrmSimpleTextEditor";
             this.Text = "Simple Text Editor";
+            this.Load += new System.EventHandler(this.FrmSimpleTextEditor_Load);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
             this.ResumeLayout(false);
@@ -98,6 +125,9 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
         private System.Windows.Forms.RichTextBox rtbAffiche;
+        private System.Windows.Forms.ToolStripMenuItem menuOuvrir;
+        private System.Windows.Forms.ToolStripMenuItem menuSave;
+        private System.Windows.Forms.ToolStripMenuItem menuQuitter;
     }
 }
 

@@ -28,8 +28,32 @@ namespace SimpleTextEditor
             //Essai d'un event manuel !!!
             exitMenuItem.Click += new EventHandler(clickOnExit);
 
+
+
+            // Appel à ma classe Static, pour ajouter un menu contextuel à ma richTextBOx
+            LibEvents.AddContextMenu(this.rtbAffiche);
         }
 
+        private void PasteAction(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+
+        }
+
+        private void CopyAction(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CutAction(object sender, EventArgs e)
+        {
+        }
+
+        /// <summary>
+        /// Event pour Quitter. MEH
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickOnExit(object sender, EventArgs e)
         {
             Close();
@@ -74,5 +98,10 @@ namespace SimpleTextEditor
 
         }
 
+
+        private void FrmSimpleTextEditor_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
