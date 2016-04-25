@@ -103,5 +103,60 @@ namespace SimpleTextEditor
         {
             
         }
+
+        private void menuAnnuler_Click(object sender, EventArgs e)
+        {
+            this.rtbAffiche.Undo();
+        }
+
+        private void menuRetablir_Click(object sender, EventArgs e)
+        {
+            this.rtbAffiche.Redo();
+        }
+
+        private void menuCopier_Click(object sender, EventArgs e)
+        {
+            this.rtbAffiche.Copy();
+        }
+
+        private void menuCouper_Click(object sender, EventArgs e)
+        {
+            this.rtbAffiche.Cut();
+
+        }
+
+        private void menuColler_Click(object sender, EventArgs e)
+        {
+            this.rtbAffiche.Paste();
+
+        }
+
+        private void menuOuvrir_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog monFichier = new OpenFileDialog();
+            monFichier.ShowDialog();
+            this.rtbAffiche.Text = monFichier.FileName;
+        }
+
+        private void menuSave_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog monFichier = new OpenFileDialog();
+            monFichier.ShowDialog();
+            if(monFichier.CheckFileExists == false)
+            {
+                //MessageBox.Show("Je ne sais pas gerer les nouveaux FichierMEh");
+                throw new NotImplementedException();
+
+            }
+            else
+            {
+               // rtbAffiche.SaveFile(monFichier.FileName);
+                throw new NotImplementedException();
+
+            }
+
+
+        }
     }
 }
