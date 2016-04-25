@@ -136,26 +136,25 @@ namespace SimpleTextEditor
 
             OpenFileDialog monFichier = new OpenFileDialog();
             monFichier.ShowDialog();
-            this.rtbAffiche.Text = monFichier.FileName;
+            string text = System.IO.File.ReadAllText(monFichier.FileName);
+            this.rtbAffiche.Text = text;
+            
         }
 
         private void menuSave_Click(object sender, EventArgs e)
         {
-            OpenFileDialog monFichier = new OpenFileDialog();
-            monFichier.ShowDialog();
-            if(monFichier.CheckFileExists == false)
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                //MessageBox.Show("Je ne sais pas gerer les nouveaux FichierMEh");
-                throw new NotImplementedException();
-
+                System.IO.StreamWriter SW = new System.IO.StreamWriter(
+                    saveFileDialog1.FileName, false, Encoding.ASCII);
+                SW.Write(rtbAffiche.Text);
+                SW.Close();
             }
-            else
-            {
-               // rtbAffiche.SaveFile(monFichier.FileName);
-                throw new NotImplementedException();
-
-            }
-
 
         }
     }
